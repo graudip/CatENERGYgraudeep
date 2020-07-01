@@ -1,0 +1,40 @@
+.contacts {
+  text-align: center;
+  list-style-type: none;
+    &__item {
+      display: inline-block;
+      margin: 0 9px;
+    }
+    &__between-line {
+      display: block;
+      color: #d9d9d9;
+      background-color: #d9d9d9;
+      width: 280px;
+    }
+    &__link {
+      &-text {
+        color: #808080;
+      }
+      &:hover {
+        filter: invert(55%) sepia(75%) saturate(408%) hue-rotate(54deg) brightness(100%) contrast(86%);
+      }
+      &:active {
+        filter: invert(97%) sepia(5%) saturate(2216%) hue-rotate(37deg) brightness(95%) contrast(83%);
+      }
+      &-common {
+        &:hover .contacts__link-text {
+          color: #afafaf;
+        }
+        &:hover .contacts__image {
+           filter: invert(55%) sepia(75%) saturate(408%) hue-rotate(54deg) brightness(100%) contrast(86%);
+        }
+        &:active .contacts__link-text {
+          color: #dfdfdf;
+        }
+        &:active .contacts__image {
+          filter: invert(89%) sepia(27%) saturate(236%) hue-rotate(50deg) brightness(97%) contrast(84%);
+        }
+      }
+      
+    }
+}

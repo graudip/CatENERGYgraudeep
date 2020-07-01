@@ -1,0 +1,41 @@
+.nav-menu {
+  &__item {
+    display: inline-block;
+    margin-left: 38px;
+    }
+  &__link {
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    &_black {
+    color: black;
+    }
+    &:hover {
+    color: fadeout(white, 20%);
+    }
+    &:active {
+    color: fadeout(white, 50%);
+    }
+    &_color_black {
+    color: black;
+    }
+    &_active {
+      &_white {
+        border-bottom: 1px solid white;
+        padding: 3px;
+      }
+      &_green {
+        border-bottom: 1px solid #68b738;
+        padding: 3px;
+      }
+    }
+    &_hover_gray {
+      &:hover {
+        color: #919191;
+      }
+      &:active {
+        color: #cccccc;
+      }
+    }
+  }
+}

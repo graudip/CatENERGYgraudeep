@@ -1,0 +1,38 @@
+.properties {
+  height: 196px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 17px;
+  text-transform: uppercase;
+  &__item {
+    margin-left: 27px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 13px;
+  }
+  &__input {
+    margin-right: 20px;
+    width: 40px;
+    height: 40px;
+    &[type=radio] {
+      display: block;
+      width: 30px;
+      height: 30px;
+      -webkit-appearance: none;
+      outline: 0;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: contain;
+      &:not(:checked) {
+        background-image: url('../img/radiobutton.webp');
+
+      }
+      &:checked {
+        background-image: url('../img/radiobutton.webp'),
+                      url('../img/radiobutton active.webp');
+        background-size: 30px, 20px;
+      }
+    }
+  }
+}

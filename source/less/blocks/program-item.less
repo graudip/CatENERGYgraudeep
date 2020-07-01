@@ -1,0 +1,41 @@
+.program-item {
+  width: 570px;
+  position: relative;
+  display: flex;
+  margin-bottom: 20px;
+  &__image {
+    position: absolute;
+    left: 535px;
+    top:20px;
+    &_phone {
+      top: 16px;
+      left:531px;
+    }
+  }
+  &_float_left {
+    float: left;
+    margin-right: 78px;
+  }
+  &__text {
+    padding-right: 10px;
+    flex: 0 0 auto;
+    margin-top: 17px;
+    margin-right: 7px;
+    align-items: center;
+    text-transform: uppercase;
+  }
+  &__input-text {
+    border: 1px solid #e6e6e6;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    font-size: 20px;
+    line-height: 20px;
+    width: 100%;
+    &:focus + .program-item__image {
+      filter: invert(63%) sepia(29%) saturate(930%) hue-rotate(54deg) brightness(94%) contrast(89%);
+    }
+    &:invalid + .program-item__image {
+      filter: invert(78%) sepia(83%) saturate(2259%) hue-rotate(305deg) brightness(96%) contrast(118%);
+    }
+  }
+}

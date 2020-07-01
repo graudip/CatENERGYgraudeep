@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>cat-energy-form-desktop</title>
+  <link rel = "stylesheet" href = "CSS/styles.min.css">
+</head>
+<body>
+  <header class = "site-header container">
+    <nav class = "site-header__navigation navigation">
+      <div class = "navigation__link-wrapper">
+        <a href = "index.html" class = "navigation__link">
+          <svg class="img-logo-desktop navigation__logo">
+            <use xlink:href="img/sprite.svg#logo-desktop"></use>
+          </svg>
+          <svg class="img-logo-desktop navigation__logo">
+            <use xlink:href = 'img/sprite.svg#logo-tablet'></use>
+          </svg>
+          <svg class = 'img-logo-desktop navigation__logo'>
+            <use xlink:href = 'img/sprite.svg#logo-mobile'></use>
+          </svg>
+        </a>   
+      </div>
+      <ul class = "navigation__menu nav-menu distance-between">
+        <li class = "nav-menu__item">
+          <a href = "index.html" class = "nav-menu__link_hover_gray nav-menu__link nav-menu__link_color_black" title = "Главная">Главная</a>
+        </li>
+        <li class = "nav-menu__item">
+          <a href = "catalog.html" class = "nav-menu__link_hover_gray nav-menu__link nav-menu__link_color_black" title = "Каталог продукции">Каталог продукции</a>
+        </li>
+        <li class = "nav-menu__item">
+          <a href = "form.html" class = "nav-menu__link_hover_gray nav-menu__link nav-menu__link_color_black nav-menu__link_active_green" title = "Подбор программы">Подбор программы</a>
+        </li>
+        <li class = 'nav-menu__item'>
+          <a class = '' href = '#'>
+            <svg class = 'img-logo-header navigation__logo'>
+              <use xlink:href = 'img/sprite.svg#logo-mobile-header'></use>
+            </svg>
+          </a>
+        </li>
+        <li class = 'nav-menu__item'>
+          <a class = '' href = '#'>
+            <svg class = 'img-logo-menu navigation__logo'>
+              <use xlink:href = 'img/sprite.svg#mobile-menu'></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main class = "site-main">
+    <section class = "site-main__program container program">
+      <h3 class = "program__heading">Подбор программы</h3>
+      <p class = "program__text">Заполните анкету и мы подберем <br> программу питания для вашего кота</p>
+      <form class = "program__form program-form" name = "program__form" action = "link">
+        <fieldset class = "program-form__list program-list">
+          <div class = "program-item">
+            <label class = "program-item__text" for = "program-item__text-name">Имя:*</label>
+            <input pattern  ="^[А-Яа-яЁё\s]+$" name = "program-item__text-name" placeholder="Барсик" type = "text" required class = "program-item__input-text">
+          </div>
+          <div class = "program-item">
+            <label for = "program-item__text-weight" class = "program-item__text">Вес (кг):*</label>
+            <input pattern = "[1-9]{0,2}" name = "program-item__text-weight" placeholder= "7" type = "text" required class = "program-item__input-text">
+          </div>
+          <div class = "program-item">
+            <label for ="program-item__text-age" class = "program-item__text">Возраст (лет):</label>
+            <input name="program-item__text-age" maxlength="30" pattern = "[1-9]{0,2}" type = "text" placeholder= "7" class = "program-item__input-text">
+          </div>
+        </fieldset>
+        <fieldset class = "program-form__list container_abort program-list program-list_radio">
+          <ul class = "program-list__properties properties">
+            <li class="properties__item">
+              <input checked name = "a" type = "radio" class = "properties__input">
+              <label class = "properties__label" for = "a">Похудение</label>
+            </li>
+            <li class="properties__item">
+              <input name = "a" type = "radio" class = "properties__input">
+              <label class = "properties__label" for = "a">Набор массы</label>
+            </li>
+            <li class="properties__item">
+              <input name = "a" type = "radio" class = "properties__input">
+              <label class = "properties__label" for = "a">Не знаю (нужен ваш совет)</label>
+            </li>
+          </ul>
+        </fieldset>
+      </form>
+    </section>
+    <section class = "container site-main__contacts owner-contacts">
+      <h3 class = "additional__heading">Контактные данные (владельца кота)</h3>
+      <form class = "program__form program-form" name = "program__form" action = "link">
+        <fieldset class = "program-form__list program-list program-list_width_100">
+          <div class = "program-item program-item_float_left">
+            <label for  = "program-item__text-mail" class = "program-item__text">E-MAIL:*</label>
+            <input name = "program-item__text-mail" placeholder= "kuklachev@gmail.com" type = "email" required class = "program-item__input-text">
+            <svg class="img-logo-mail program-item__image">
+              <use xlink:href="img/sprite.svg#mail"></use>
+            </svg>
+          </div>
+          <div class = "program-item program-item_display_inline-block">
+            <label class = "program-item__text" name = "program-item__text-phone">Телефон:*</label>
+            <input pattern="7\[0-9]{3}\[0-9]{3}-[0-9]{2}-[0-9]{2}" for = "program-item__text-phone" size = "30px"  placeholder = "8 (960) 900-60-90" type = "tel" required class = "program-item__input-text">
+            <svg class="img-logo-phone program-item__image program-item__image_phone">
+              <use xlink:href="img/sprite.svg#phone"></use>
+            </svg>
+          </div>
+        </fieldset>
+      </form>
+    </section>
+    <section class = "container form_container site-main__comment comment">
+      <h3 class = "additional__heading">Комментарий</h3>
+      <textarea placeholder = "РАССКАЖИТЕ ОБО ВСЕХ ПОВАДКАХ КОТА" class = "comment__text"></textarea>  
+    </section>
+    <section class = "site-main__extra extra container form_container">
+      <h3 class = "additional__heading">Дополнительно</h3>
+      <ul class = "extra__list">
+        <li class="extra__item extra-prop">
+          <input checked id = "cfirst" type = "checkbox" class = "extra-prop__input">
+          <label for = "cfirst" class = "extra-prop__text">Сахарозаменитель</label>
+        </li>
+        <li class="extra__item">
+          <input id = "csecond" type = "checkbox" class = "extra-prop__input">
+          <label for = "csecond" class = "extra-prop__text">Питьевая вода</label>
+        </li>
+        <li class="extra__item">
+          <input id = "cthird" type = "checkbox" class = "extra-prop__input">
+          <label for = "cthird" class = "extra-prop__text">Молоко</label>
+        </li>
+        <li class="extra__item">
+          <input id = "cfourth" type = "checkbox" class = "extra-prop__input">
+          <label for = "cfourth" class = "extra-prop__text">Витамины</label>
+        </li>
+      </ul>
+        <button  class = "product__button extra-button" name = "extra-button">Отправить заявку</button>
+        <span  class = "extra__info">* — обязательные поля</span>
+      </form>
+      <br>
+    </section>
+    <section class = "site-main__location location container location_margin-top ">
+      <div class = "location__info info_theme_gray info">
+        <div class = "location__item">
+          <p class = "info__text">Приглашаем к сотрудничеству дилеров!</p>
+        </div>
+        <div class = "location__item">
+          <p class = "info__street"> ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class = "site-footer container container__footer">
+    <a href = "#" class = "site-footer__link site-footer__logo">
+      <svg class="img-logo-footer contacts__image">
+        <use xlink:href="img/sprite.svg#footer-logo"></use>
+      </svg>
+    </a>
+    <hr class = 'contacts__between-line'>
+    <ul class = "site-footer__contacts contacts">
+      <li class = "contacts__item">
+        <a class = "contacts__link" href = "#">
+          <svg class="img-logo-vk contacts__image">
+            <use xlink:href="img/sprite.svg#vk"></use>
+          </svg>
+        </a>
+      </li>
+      <li class = "contacts__item">
+        <a class = "contacts__link" href = "#">
+          <svg class="img-logo-inst contacts__image">
+            <use xlink:href="img/sprite.svg#insta"></use>
+          </svg>
+        </a>
+      </li>
+      <li class = "contacts__item">
+        <a class = "contacts__link" href = "#">
+          <svg class="img-logo-fb contacts__image">
+            <use xlink:href="img/sprite.svg#fb"></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
+    <hr class = 'contacts__between-line'>
+    <div class = "site-footer__logo-developer logo-developer">
+      <a class = "contacts__link-common" href = "#" class = "" title = "Ссылка на HTML Academy"><span class = "contacts__link-text">HTML Academy</span>
+      <span class = "contacts__link contacts__link_htmlacademy">
+        <svg class="img-logo-academy contacts__image logo-developer__logo">
+         <use xlink:href="img/sprite.svg#htmlacademy"></use>
+       </svg>
+      </span>
+      </a>
+    </div>
+  </footer>
+  <script src = "js/picturefill.min.js"></script>
+</body>
+</html>

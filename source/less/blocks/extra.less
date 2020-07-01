@@ -1,0 +1,54 @@
+.extra {
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    &:active {
+      opacity: 0.4;
+    }
+  }
+  &__info {
+    margin-left: 84px;
+  }
+  &-button {
+    width: 568px;
+    margin-left: 0px;
+    margin-bottom: 82px;
+  }
+  &-prop {
+    &__text {
+      font-size: 18px;
+      text-transform: uppercase;
+      margin-left: 19px;
+    }
+    &__input {
+      width: 40px;
+      height: 40px;
+      &[type=checkbox] {
+        display: block;
+        width: 30px;
+        height: 30px;
+        -webkit-appearance: none;
+        outline: 0;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        &:not(:checked) {
+          background-image: url('../img/checkbox.webp');
+
+        }
+        &:checked {
+          background-image: url('../img/checkbox.webp'),
+                        url('../img/tick.svg.webp');
+          background-size: 30px, 21px;
+          border-radius: 1px solid green;
+        }
+      }
+    }
+  }
+}
+

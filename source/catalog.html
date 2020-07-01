@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>cat-energy-catalog-desktop</title>
+  <link rel = "stylesheet" href = "CSS/styles.min.css">
+</head>
+<body>
+  <header class = "site-header container">
+    <nav class = "site-header__navigation navigation">
+      <div class = "navigation__link-wrapper">
+        <a href = "index.html" class = "navigation__link">
+          <svg class="img-logo-desktop navigation__logo">
+            <use xlink:href="img/sprite.svg#logo-desktop"></use>
+          </svg>
+          <svg class="img-logo-desktop navigation__logo">
+            <use xlink:href = 'img/sprite.svg#logo-tablet'></use>
+          </svg>
+          <svg class = 'img-logo-desktop navigation__logo'>
+            <use xlink:href = 'img/sprite.svg#logo-mobile'></use>
+          </svg>
+        </a>   
+      </div>
+      <ul class = "navigation__menu nav-menu distance-between">
+        <li class = "nav-menu__item">
+          <a href = "index.html" class = "nav-menu__link_hover_gray nav-menu__link nav-menu__link_color_black" title = "Главная">Главная</a>
+        </li>
+        <li class = "nav-menu__item">
+          <a href = "#" class = "nav-menu__link_hover_gray nav-menu__link nav-menu__link_color_black nav-menu__link_active_green" title = "Каталог продукции">Каталог продукции</a>
+        </li>
+        <li class = "nav-menu__item">
+          <a href = "form.html" class = "nav-menu__link_hover_gray nav-menu__link nav-menu__link_color_black" title = "Подбор программы">Подбор программы</a>
+        </li>
+        <li class = 'nav-menu__item'>
+          <a class = '' href = '#'>
+            <svg class = 'img-logo-header navigation__logo'>
+              <use xlink:href = 'img/sprite.svg#logo-mobile-header'></use>
+            </svg>
+          </a>
+        </li>
+        <li class = 'nav-menu__item'>
+          <a class = '' href = '#'>
+            <svg class = 'img-logo-menu navigation__logo'>
+              <use xlink:href = 'img/sprite.svg#mobile-menu'></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main class = "site-main">
+    <section class = "site-main__catalog catalog container">
+      <h3 class = "catalog__heading">Каталог продукции</h3>
+      <ul class = "catalog__list">
+        <li class = "catalog__item product">
+          <div class = "product__logo_size_small product__logo">
+            <picture>
+              <source type = "image/webp" media = '(min-width: 1440px)' srcset = "img/catalog-1-desktop.webp 1x, img/catalog-1-desktop@2x.webp 2x">
+              <source type = "image/webp" media = '(min-width: 1440px)' srcset = "img/catalog-1-desktop.png 1x, img/catalog-1-desktop@2x.png 2x">
+              <source type = 'image/webp' media = '(min-width: 768px)' srcset = 'img/catalog-1-tablet.webp 1x , img/catalog-1-tablet@2x.webp 2x'>
+                <source type = 'image/webp' media = '(min-width: 768px)' srcset = 'img/catalog-1-tablet.png 1x , img/catalog-1-tablet@2x.png 2x'>
+              <source type =  'image/webp' media = '(min-width: 320px)' srcset = 'img/catalog-1-mobile.webp 1x , img/catalog-1-mobile@2x.webp 2x'>
+              <img alt = 'Пример нашей продукции' src = "img/catalog-1-desktop.png" srcset = "img/catalog-1-desktop@2x.png 2x" class = "product__image product__image_size_small">
+            </picture>
+          </div>
+          <h3 class = "product__heading">Cat Energy PRO 500 г</h3>
+          <div class = 'product__list'>
+            <div class = "product__option">
+              <span class = "product__option-word">Объём</span>
+              <span class = "product__option-value">500г</span>
+            </div>
+            <div class = "product__option">
+              <span class = "product__option-word">Вкус</span>
+              <span class = "product__option-value">Курица</span>
+            </div>
+            <div class = "product__option">
+              <span class = "product__option-word">Цена</span>
+              <span class = "product__option-value">700 Р.</span>
+            </div>
+          </div>
+          <form action = "link">
+            <button class = "product__button" name = "product__button">Заказать</button>
+          </form>
+        </li>
+        <li class = "catalog__item product">
+          <div class = "product__logo product__logo_size_big">
+            <picture>
+              <source type = "image/webp" media = '(min-width: 1440px)' srcset = "img/catalog-2-desktop.webp 1x, img/catalog-2-desktop@2x.webp 2x">
+              <source type = 'image/webp' media = '(min-width: 768px)' srcset = 'img/catalog-2-tablet.webp 1x , img/catalog-2-tablet@2x.webp 2x'>
+              <source type =  'image/webp' media = '(min-width: 320px)' srcset = 'img/catalog-2-mobile.webp 1x , img/catalog-2-mobile@2x.webp 2x'>
+              <img alt = 'Пример нашей продукции' src = "img/catalog-2-desktop.png" srcset = "img/catalog-2-desktop@2x.png 2x" class = "product__image product__image_size_big">
+            </picture>
+          </div>
+          <h3 class = "product__heading">Cat Energy PRO 1000 г</h3>
+          <div class = 'product__list'>
+            <div class = "product__option">
+              <span class = "product__option-word">Объём</span>
+              <span class = "product__option-value">1000г</span>
+            </div>
+            <div class = "product__option">
+              <span class = "product__option-word">Вкус</span>
+              <span class = "product__option-value">Курица</span>
+            </div>
+            <div class = "product__option">
+              <span class = "product__option-word">Цена</span>
+              <span class = "product__option-value">1000 Р.</span>
+            </div>
+          </div>
+          <form action = "link">
+            <button class = "product__button" name = "product__button">Заказать</button>
+          </form>
+        </li>
+        <li class = "catalog__item product">
+          <div class = "product__logo_size_small product__logo">
+            <picture>
+              <source type = "image/webp" media = '(min-width: 1440px)' srcset = "img/catalog-3-desktop.webp 1x, img/catalog-3-desktop@2x.webp 2x">
+              <source type = 'image/webp' media = '(min-width: 768px)' srcset = 'img/catalog-3-tablet.webp 1x , img/catalog-3-tablet@2x.webp 2x'>
+              <source type =  'image/webp' media = '(min-width: 320px)' srcset = 'img/catalog-3-mobile.webp 1x , img/catalog-3-mobile@2x.webp 2x'>
+              <img alt = 'Пример нашей продукции' src = "img/catalog-3-desktop.png" srcset = "img/catalog-3-desktop@2x.png 2x" class = "product__image product__image_size_small">
+            </picture>
+          </div>
+          <h3 class = "product__heading">Cat Energy PRO 500 г</h3>
+          <div class = 'product__list'>
+            <div class = "product__option">
+              <span class = "product__option-word">Объём</span>
+              <span class = "product__option-value">500г</span>
+            </div>
+            <div class = "product__option">
+              <span class = "product__option-word">Вкус</span>
+              <span class = "product__option-value">Курица</span>
+            </div>
+            <div class = "product__option">
+              <span class = "product__option-word">Цена</span>
+              <span class = "product__option-value">700 Р.</span>
+            </div>
+          </div>
+          <form action = "link">
+            <button class = "product__button" name = "product__button">Заказать</button>
+          </form>
+        </li>
+        <li class = "catalog__item product">
+          <div class = "product__logo product__logo_size_big">
+            <picture>
+              <source type = "image/webp" media = '(min-width: 1440px)' srcset = "img/catalog-4-desktop.webp 1x, img/catalog-4-desktop@2x.webp 2x">
+              <source type = 'image/webp' media = '(min-width: 768px)' srcset = 'img/catalog-4-tablet.webp 1x , img/catalog-4-tablet@2x.webp 2x'>
+              <source type =  'image/webp' media = '(min-width: 320px)' srcset = 'img/catalog-4-mobile.webp 1x , img/catalog-4-mobile@2x.webp 2x'>
+              <img alt = 'Пример нашей продукции' src = "img/catalog-4-desktop.png" srcset = "img/catalog-4-desktop@2x.png 2x" class = "product__image product__image_size_big">
+            </picture>
+          </div>
+          <h3 class = "product__heading">Cat Energy PRO 500 г</h3>
+          <div class = 'product__list'>
+            <div class = "product__option">
+              <span class = "product__option-word">Объём</span>
+              <span class = "product__option-value">500г</span>
+            </div>
+            <div class = "product__option">
+              <span class = "product__option-word">Вкус</span>
+              <span class = "product__option-value">Курица</span>
+            </div>
+            <div class = "product__option">
+              <span class = "product__option-word">Цена</span>
+              <span class = "product__option-value">700 Р.</span>
+            </div>
+          </div>
+          <form action = "link">
+            <button class = "product__button" name = "product__button">Заказать</button>
+          </form>
+        </li>
+        <li class = "catalog__item product">
+          <div class = "product__logo_size_small product__logo">
+            <picture>
+              <source type = "image/webp" media = '(min-width: 1440px)' srcset = "img/catalog-5-desktop.webp 1x, img/catalog-5-desktop@2x.webp 2x">
+              <source type = "image/webp" media = '(min-width: 1440px)' srcset = "img/catalog-5-desktop.jpg 1x, img/catalog-5-desktop@2x.jpg 2x">
+              <source type = 'image/webp' media = '(min-width: 768px)' srcset = 'img/catalog-5-tablet.webp 1x , img/catalog-5-tablet@2x.webp 2x'>
+              <source type =  'image/webp' media = '(min-width: 320px)' srcset = 'img/catalog-5-mobile.webp 1x , img/catalog-5-mobile@2x.webp 2x'>
+              <img alt = 'Пример нашей продукции' src = "img/catalog-5-desktop.png" srcset = "img/catalog-5-desktop@2x.png 2x" class = "product__image product__image_size_small">
+            </picture>
+          </div>
+          <h3 class = "product__heading">Cat Energy PRO 500 г</h3>
+          <div class = 'product__list'>
+            <div class = "product__option">
+              <span class = "product__option-word">Объём</span>
+              <span class = "product__option-value">500г</span>
+            </div>
+            <div class = "product__option">
+              <span class = "product__option-word">Вкус</span>
+              <span class = "product__option-value">Курица</span>
+            </div>
+            <div class = "product__option">
+              <span class = "product__option-word">Цена</span>
+              <span class = "product__option-value">700 Р.</span>
+            </div>
+          </div>
+          <form action = "link">
+            <button class = "product__button" name = "product__button">Заказать</button>
+          </form>
+        </li>
+        <li class = "catalog__item product">
+          <div class = "product__logo product__logo_size_big">
+            <picture>
+              <source type = "image/webp" media = '(min-width: 1440px)' srcset = "img/catalog-6-desktop.webp 1x, img/catalog-6-desktop@2x.webp 2x">
+              <source type = 'image/webp' media = '(min-width: 768px)' srcset = 'img/catalog-6-tablet.webp 1x , img/catalog-6-tablet@2x.webp 2x'>
+              <source type =  'image/webp' media = '(min-width: 320px)' srcset = 'img/catalog-6-mobile.webp 1x , img/catalog-6-mobile@2x.webp 2x'>
+              <img alt = 'Пример нашей продукции' src = "img/catalog-6-desktop.png" srcset = "img/catalog-6-desktop@2x.png 2x" class = "product__image product__image_size_big">
+            </picture>
+          </div>
+          <h3 class = "product__heading">Cat Energy PRO 500 г</h3>
+          <div class = 'product__list'>
+            <div class = "product__option">
+              <span class = "product__option-word">Объём</span>
+              <span class = "product__option-value">500г</span>
+            </div>
+            <div class = "product__option">
+              <span class = "product__option-word">Вкус</span>
+              <span class = "product__option-value">Курица</span>
+            </div>
+            <div class = "product__option">
+              <span class = "product__option-word">Цена</span>
+              <span class = "product__option-value">700 Р.</span>
+            </div>
+          </div>
+          <form action = "link">
+            <button class = "product__button" name = "product__button">Заказать</button>
+          </form>
+        </li>
+        <li class = "catalog__item product">
+          <div class = "product__logo_size_small product__logo">
+            <picture>
+              <source type = "image/webp" media = '(min-width: 1440px)' srcset = "img/catalog-7-desktop.webp 1x, img/catalog-7-desktop@2x.webp 2x">
+              <source type = 'image/webp' media = '(min-width: 768px)' srcset = 'img/catalog-7-tablet.webp 1x , img/catalog-7-tablet@2x.webp 2x'>
+              <source type =  'image/webp' media = '(min-width: 320px)' srcset = 'img/catalog-7-mobile.webp 1x , img/catalog-7-mobile@2x.webp 2x'>
+              <img alt = 'Пример нашей продукции' src = "img/catalog-7-desktop.png" srcset = "img/catalog-7-desktop@2x.png 2x" class = "product__image product__image_size_small">
+            </picture>
+          </div>
+          <h3 class = "product__heading">Cat Energy PRO 500 г</h3>
+          <div class = 'product__list'>
+            <div class = "product__option">
+              <span class = "product__option-word">Объём</span>
+              <span class = "product__option-value">500г</span>
+            </div>
+            <div class = "product__option">
+              <span class = "product__option-word">Вкус</span>
+              <span class = "product__option-value">Курица</span>
+            </div>
+            <div class = "product__option">
+              <span class = "product__option-word">Цена</span>
+              <span class = "product__option-value">700 Р.</span>
+            </div>
+          </div>
+          <form action = "link">
+            <button class = "product__button product__button_margin-bottom" name = "product__button">Заказать</button>
+          </form>
+        </li>
+        <li class = "catalog__item catalog__item_theme_last product">
+          <div class = "product__logo product__logo_theme_last">
+            <svg class="img-logo-product contacts__image">
+              <use xlink:href="img/sprite.svg#plus"></use>
+            </svg>
+            <svg class="img-logo-product contacts__image">
+              <use xlink:href="img/sprite.svg#plus-mobile"></use>
+            </svg>
+          </div>
+          <h3 class = "product__heading product__heading_theme_last">Показать ещё 100500 товаров </h3>
+          <p class = "product__text product__text_theme_last">На самом деле вкусов гораздо больше!</p>
+          <form action = "link">
+            <button class = "product__button product__button_theme_last" name = "product__button">Показать всё</button>
+          </form>
+        </li>
+      </ul>
+    </section>
+    <section class = "site-main__additional additional container">
+      <h3 class = "additional__heading"> Дополнительные товары</h3>
+      <table class = "additional__table add-table">
+        <tr class="add-table__row_additional-heading">
+          <td>
+            Сахарозаменитель
+          </td>
+        </tr>
+        <tr class="add-table__row">
+          <td class="add-table__column">Сахарозаменитель</td>
+          <td class="add-table__column">1 упакова (100 г)</td>
+          <td class="add-table__column">200 Р.</td>
+          <td class="add-table__column">
+            <form action = "link">
+              <button class = "product__button product__button_width_large product__button_main" name = "product__button">Заказать</button>
+            </form>
+          </td>
+        </tr>
+        <tr class = 'add-table__row_additional'>
+          <td colspan = '4'>
+            <form action = "link">
+              <button class = "product__button product__button_width_large product__button_additional" name = "product__button">Заказать</button>
+            </form>
+          </td>
+        </tr>
+        <tr class="add-table__row">
+          <td class="add-table__column">Питьевая вода</td>
+          <td class="add-table__column">5 литров</td>
+          <td class="add-table__column">50 Р.</td>
+          <td class="add-table__column">
+            <form action = "link">
+            <button class = "product__button product__button_width_large" name = "product__button">Заказать</button>
+          </form>
+          </td>
+        </tr>
+        <tr class = 'add-table__row_additional'>
+          <td colspan = '4'>
+            <form action = "link">
+              <button class = "product__button product__button_width_large product__button_additional" name = "product__button">Заказать</button>
+            </form>
+          </td>
+        </tr>
+        <tr class="add-table__row">
+          <td class="add-table__column">Молоко</td>
+          <td class="add-table__column">1 литр</td>
+          <td class="add-table__column">100 Р.</td>
+          <td class="add-table__column">
+            <form action = "link">
+              <button class = "product__button product__button_width_large" name = "product__button">Заказать</button>
+            </form>
+          </td>
+        </tr>
+        <tr class = 'add-table__row_additional'>
+          <td colspan = '4'>
+            <form action = "link">
+              <button class = "product__button product__button_width_large product__button_additional" name = "product__button">Заказать</button>
+            </form>
+          </td>
+        </tr>
+        <tr class="add-table__row">
+          <td class="add-table__column">Витамины</td>
+          <td class="add-table__column">1 упаковка (30 г)</td>
+          <td class="add-table__column">300 Р.</td>
+          <td class="add-table__column">
+            <form action = "link">
+              <button class = "product__button product__button_width_large" name = "product__button">Заказать</button>
+            </form>
+          </td>
+        </tr>
+        <tr class = 'add-table__row_additional'>
+          <td colspan = '4'>
+            <form action = "link">
+              <button class = "product__button product__button_width_large product__button_additional" name = "product__button">Заказать</button>
+            </form>
+          </td>
+        </tr>
+      </table>
+      <div class = "additional__info add-info">
+        <p class = "add-info__text">Закажите все <br>и получите чехол для <br> кота в подарок!</p>
+      </div>
+    </section>
+    <section class = "site-main__location location container location_margin-top ">
+      <div class = "location__info info_theme_gray info">
+        <div class = "location__item">
+          <p class = "info__text">Приглашаем к сотрудничеству дилеров!</p>
+        </div>
+        <div class = "location__item">
+          <p class = "info__street"> ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class = "site-footer container container__footer">
+    <a href = "#" class = "site-footer__link site-footer__logo">
+      <svg class="img-logo-footer contacts__image">
+        <use xlink:href="img/sprite.svg#footer-logo"></use>
+      </svg>
+    </a>
+    <hr class = 'contacts__between-line'>
+    <ul class = "site-footer__contacts contacts">
+      <li class = "contacts__item">
+        <a class = "contacts__link" href = "#">
+          <svg class="img-logo-vk contacts__image">
+            <use xlink:href="img/sprite.svg#vk"></use>
+          </svg>
+        </a>
+      </li>
+      <li class = "contacts__item">
+        <a class = "contacts__link" href = "#">
+          <svg class="img-logo-inst contacts__image">
+            <use xlink:href="img/sprite.svg#insta"></use>
+          </svg>
+        </a>
+      </li>
+      <li class = "contacts__item">
+        <a class = "contacts__link" href = "#">
+          <svg class="img-logo-fb contacts__image">
+            <use xlink:href="img/sprite.svg#fb"></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
+    <hr class = 'contacts__between-line'>
+    <div class = "site-footer__logo-developer logo-developer">
+      <a class = "contacts__link-common" href = "#" title = "Ссылка на HTML Academy"><span class = "contacts__link-text">HTML Academy</span>
+      <span class = "contacts__link">
+        <svg class="img-logo-academy contacts__image logo-developer__logo">
+         <use xlink:href="img/sprite.svg#htmlacademy"></use>
+       </svg>
+      </span>
+      </a>
+    </div>
+  </footer>
+  <script src = "js/picturefill.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+.services {
+  margin-top: 340px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__wrapper {
+    background-color: #f2f2f2;
+    width: 570px;
+    &:not(:nth-of-type(1)) {
+      margin-left:80px;
+    }
+  }
+  &__logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #68b738;
+    margin-left: 52px;
+    margin-top: 46px;
+    float: left;
+  }
+  &__logo-image-1 {
+    float: left;
+    margin-left: 20px;
+    width: 70px;
+    height: 97px;
+  }
+  &__between-line {
+    display: block;
+    color: #d9d9d9;
+    background-color: #d9d9d9;
+    width: 240px;
+  }
+  &__logo-image-2 {
+    float: left;
+    margin-left: -20px;
+    margin-top: 20px;
+    width: 134px;
+    height: 56px;
+  }
+  &__heading {
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-top: 80px;
+    margin-left: 210px;
+  }
+  &__text {
+    color: #808080;
+    width: 400px;
+    font-size: 16px;
+    margin-left: 53px;
+    margin-top: 70px;
+    margin-right: 56px;
+  }
+  &__route {
+    margin-top: 60px;
+    margin-left: 53px;
+    margin-bottom: 62px;
+    &:active {
+      opacity: 0.5;
+    }
+  }
+  &__arrow {
+    margin-left: 20px;
+  }
+  &__link--catalog {
+    font-size: 16px;
+    &:after {
+      content: url('../img/right-arrow-long.svg.webp');
+      margin-left:20px;
+    }
+  }
+}
