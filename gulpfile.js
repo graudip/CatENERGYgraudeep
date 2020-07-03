@@ -18,6 +18,7 @@ var less = require('gulp-less');
 var postcss = require('gulp-postcss');
 var autoprefixer = require('autoprefixer');
 var concat = require('gulp-concat');
+const eslint = require('gulp-eslint');
 var server = require('browser-sync').create();
 var htmlValidator = require('gulp-w3c-html-validator');
 var cssValidator = require('gulp-w3c-css');
@@ -91,6 +92,14 @@ gulp.task('fontsIn', function() {
     .pipe(gulp.dest('build/fonts'))
 })
 
+gulp.task('eslint', function() {
+  return gulp.src('source/js/*.js')
+  .pipe(plumber())
+  .pipe(eslint())
+  .pipe(eslint.format())
+  .pipe(eslint.failAfterError());
+});
+
 gulp.task('svgMin', function() {
   return gulp.src('source/img/*.svg')
     .pipe(svgmin())
@@ -155,7 +164,7 @@ gulp.task('server', function() {
 	gulp.watch('source/*.html').on('change', server.reload);
 });
 
-gulp.task('start', gulp.series('css', 'image', 'webp', 'svgFix', 'svgSprite', 'server')); 
+gulp.task('start', gulp.series('css', 'image', 'webp', 'svgFix', 'svgSprite', 'eslint', 'server')); 
 
 gulp.task('test', gulp.series('validateCSS', 'validateJS', 'validateHTML'));
 
