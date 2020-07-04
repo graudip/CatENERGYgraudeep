@@ -50,5 +50,57 @@
       }
     }
   }
+  @media screen and (min-width: 768px) and (max-width: 1439px) {
+    &-button {
+      margin-left: 0px !important;
+    }
+    &__list {
+      justify-content: space-between;
+      width: 530px;
+      height: 112px;
+      flex-wrap: wrap;
+      font-size: 20px;
+      flex-direction: column-reverse;
+    }
+    &-prop {
+      &__input {
+        &[type=checkbox] {
+          width: 40px;
+          height: 40px;
+          &:not(:checked) {
+            width: 40px;
+            height: 40px;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 767px) {
+    &-button {
+      margin-left: 0px !important;
+      margin-bottom: 23px !important;
+    }
+    &__item {
+      margin-bottom: 13px;
+    }
+    &__list {
+      width: 530px;
+      min-height: 160px;
+      font-size: 20px;
+      flex-direction: column;
+    }
+    &-prop {
+      &__input {
+        &[type=checkbox] {
+          width: 40px;
+          height: 40px;
+          &:not(:checked) {
+            width: 40px;
+            height: 40px;
+          }
+        }
+      }
+    }
+  }
 }
 

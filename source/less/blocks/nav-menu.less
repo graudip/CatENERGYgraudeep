@@ -38,4 +38,48 @@
       }
     }
   }
+  @media screen and (max-width: 767px) {
+    &__item {
+      margin-left: 36px;
+      &:nth-of-type(1) {
+        display: none;
+      }
+      &:nth-of-type(2) {
+        display: none;
+      }
+      &:nth-of-type(3) {
+        display: none;
+      }
+    }
+    &__link {
+      color: #222222;
+      &_active {
+        &_white {
+          border-color: #68b738;
+        }
+      }
+    }
+    &__button {
+      display: none;
+    }
+  }
+  @media screen and (min-width: 768px) and (max-width: 1439px) {
+    &__item {
+      margin-left: 36px;
+      &:nth-of-type(4) {
+        display: none;
+      }
+    }
+    &__link {
+      color: #222222;
+      &_active {
+        &_white {
+          border-color: #68b738;
+        }
+      }
+    }
+    &__button {
+      display: none;
+    }
+  }
 }

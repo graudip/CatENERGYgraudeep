@@ -24,4 +24,46 @@
   &__street {
     float: right;
   }
+  @media screen and (max-width: 767px) {
+    &__info {
+      margin-top: 34px !important;
+    }
+    width: 320px;
+    height: 476px;
+    &__item {
+      width: 50%;
+      float: left;
+      margin: 0px;
+    }
+    &__info {
+      height: 114px;
+      width:  320px;
+      padding: 0px;
+      margin: 0px;
+      margin-left: -30px;
+      background-color: white;
+      list-style-type: none;
+    }
+  }
+  @media screen and (min-width: 768px) and (max-width: 1439px) {
+    width: 768px;
+    height: 600px;
+    &__item {
+      width: 50%;
+      float: left;
+      margin-top:50px;
+    }
+    &__info {
+      &_theme_form {
+        margin-left: 0px;
+      }
+      height: 200px;
+      width: 768px;
+      padding: 0px;
+      margin: 0px;
+      margin-left: -30px;
+      background-color: white;
+      list-style-type: none;
+    }
+  }
 }

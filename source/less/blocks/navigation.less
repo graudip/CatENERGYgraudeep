@@ -12,4 +12,26 @@
       opacity: 0.5;
     }
   }
+  @media screen and (max-width: 767px) {
+    padding-top: 10px;
+    &__logo {
+      &:not(:last-of-type) {
+        display: none;
+      }
+    }
+  }
+  @media screen and (min-width: 1440px) {
+    &__logo {
+      &:not(:nth-of-type(2)) {
+        display: none;
+      }
+    }
+  }
+  @media screen and (min-width: 768px) and (max-width: 1439px) {
+     &__logo {
+      &:not(:nth-of-type(2)) {
+        display: none;
+      }
+    }
+  }
 }

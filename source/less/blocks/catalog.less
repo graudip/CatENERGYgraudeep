@@ -22,4 +22,27 @@
     flex-wrap: wrap;
     justify-content: space-between;
   }
+  @media screen and (max-width: 767px) {
+    padding: 0px !important;
+    &__heading {
+      width: 243px;
+      font-size: 30px;
+      margin-left: 2px;
+      margin-bottom: 42px;
+    }
+    &__item {
+      width: 320px;
+      min-height: 210px;
+      margin-top: 0px;
+      &_theme_last {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+  @media screen and (min-width: 768px) and (max-width: 1439px) {
+    &__item {
+      width: 324px;
+    }
+  }
 }
