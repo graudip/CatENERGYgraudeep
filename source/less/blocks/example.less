@@ -81,5 +81,49 @@
       margin-top: 300px;
     }
   }
+  @media screen and (max-width: 767px) {
+    height: 705px;
+    &__subtitle {
+      width: 190px;
+      display: inline-block;
+      font-size: 13px;
+      margin-left: 47px;
+      margin-bottom: 290px;
+      &-text {
+        margin-left: 3px;
+      }
+    }
+    &__image {
+      position: relative;
+      top: 550px;
+      &_disabled {
+        display: none;
+      }
+    }
+    &__text {
+      margin-bottom: 30px;
+      width: 270px;
+      font-size: 16px;
+      margin-top: -144px;
+    }
+    &__list {
+      width: 280px;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 25px;
+      height: 70px;
+    }
+    &__item {
+      &-fieldset {
+        width: 124px;
+      }
+      &-legend {
+        font-size: 12px;
+        width: 54px;
+        text-align: center;
+        padding: 0 17px;
+      }
+    }
+  }
 }
 
