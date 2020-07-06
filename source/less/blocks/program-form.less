@@ -22,7 +22,8 @@
   }
   @media screen and (max-width: 767px) {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     &__list {
       padding-left: 0px;
       margin-right: 0px;
@@ -30,13 +31,11 @@
     }
   }
   @media screen and (min-width: 768px) and (max-width: 1439px) {
-    &-form {
-      display: flex;
-      flex-direction: column;
-      &__list {
-         margin-left: 42px;
-         padding-left: 0px;
-      }
+    display: flex;
+    flex-direction: column;
+    &__list {
+       margin-left: 42px;
+       padding-left: 0px;
     }
   }
 }

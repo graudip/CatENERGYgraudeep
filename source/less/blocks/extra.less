@@ -53,6 +53,7 @@
   @media screen and (min-width: 768px) and (max-width: 1439px) {
     &-button {
       margin-left: 0px !important;
+      width: 283px;
     }
     &__list {
       justify-content: space-between;
@@ -77,8 +78,12 @@
   }
   @media screen and (max-width: 767px) {
     &-button {
+      width: 280px;
       margin-left: 0px !important;
       margin-bottom: 23px !important;
+    }
+    &__info {
+      margin-left: 62px;
     }
     &__item {
       margin-bottom: 13px;
@@ -87,16 +92,15 @@
       width: 530px;
       min-height: 160px;
       font-size: 20px;
+      margin-bottom: 25px;
       flex-direction: column;
     }
     &-prop {
       &__input {
         &[type=checkbox] {
-          width: 40px;
-          height: 40px;
           &:not(:checked) {
-            width: 40px;
-            height: 40px;
+            width: 30px;
+            height: 30px;
           }
         }
       }
