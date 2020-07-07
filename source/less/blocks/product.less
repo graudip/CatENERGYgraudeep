@@ -178,6 +178,11 @@
   }
   @media screen and (min-width: 768px) and (max-width: 1439px) {
     &__logo {
+      &_size {
+        &_big {
+          margin-top: -87px;
+        }
+      }
       &_theme {
         &_last {
           svg:not(:nth-of-type(1)) {
@@ -186,17 +191,23 @@
         }
       }
     }
+    &__list {
+      margin-bottom: 33px;
+    }
     &__option {
       width: 249px;
     }
     &__heading {
       margin-top: 30px;
+      &_theme_last {
+        margin-top: 54px;
+      }
     }
     &__button {
       width: 249px;
       margin: 0px;
       margin-left: 37px;
-      margin-bottom: 72px;
+      margin-bottom: 41px;
       &_width_large {
         width: 633px;
       }
