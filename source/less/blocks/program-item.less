@@ -31,11 +31,17 @@
     font-size: 20px;
     line-height: 20px;
     width: 100%;
+    &:active {
+      border: 2px solid #444444;
+    }
     &:focus + .program-item__image {
       filter: invert(63%) sepia(29%) saturate(930%) hue-rotate(54deg) brightness(94%) contrast(89%);
     }
     &:invalid + .program-item__image {
       filter: invert(78%) sepia(83%) saturate(2259%) hue-rotate(305deg) brightness(96%) contrast(118%);
+    }
+    &_invalid {
+      border: 2px solid #ff8282;
     }
   }
   @media screen and (max-width: 767px) {

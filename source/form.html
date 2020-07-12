@@ -57,15 +57,15 @@
         <fieldset class = "program-form__list program-list">
           <div class = "program-item">
             <label class = "program-item__text" for = "program-item__text-name">Имя:*</label>
-            <input pattern  ="^[А-Яа-яЁё\s]+$" name = "program-item__text-name" placeholder="Барсик" type = "text" required class = "program-item__input-text">
+            <input data-rule = "name" name = "program-item__text-name" placeholder="Барсик" type = "text" required class = "program-item__input-text">
           </div>
           <div class = "program-item">
             <label for = "program-item__text-weight" class = "program-item__text">Вес (кг):*</label>
-            <input pattern = "[1-9]{0,2}" name = "program-item__text-weight" placeholder= "7" type = "text" required class = "program-item__input-text">
+            <input data-rule = "weight" name = "program-item__text-weight" placeholder= "7" type = "text" required class = "program-item__input-text">
           </div>
           <div class = "program-item">
             <label for ="program-item__text-age" class = "program-item__text">Возраст (лет):</label>
-            <input name="program-item__text-age" maxlength="30" pattern = "[1-9]{0,2}" type = "text" placeholder= "7" class = "program-item__input-text">
+            <input data-rule = "age" name="program-item__text-age" maxlength="30" type = "text" placeholder= "7" class = "program-item__input-text">
           </div>
         </fieldset>
         <fieldset class = "program-form__list container_abort program-list program-list_radio">
@@ -92,14 +92,14 @@
         <fieldset class = "program-form__list program-list program-list_width_100">
           <div class = "program-item program-item_float_left">
             <label for  = "program-item__text-mail" class = "program-item__text">E-MAIL:*</label>
-            <input name = "program-item__text-mail" placeholder= "kuklachev@gmail.com" type = "email" required class = "program-item__input-text">
+            <input data-rule = "email" name = "program-item__text-mail" placeholder= "kuklachev@gmail.com" type = "email" required class = "program-item__input-text">
             <svg class="img-logo-mail program-item__image">
               <use xlink:href="img/sprite.svg#mail"></use>
             </svg>
           </div>
           <div class = "program-item program-item_display_inline-block">
             <label class = "program-item__text" name = "program-item__text-phone">Телефон:*</label>
-            <input pattern="7\[0-9]{3}\[0-9]{3}-[0-9]{2}-[0-9]{2}" for = "program-item__text-phone" size = "30px"  placeholder = "8 (960) 900-60-90" type = "tel" required class = "program-item__input-text">
+            <input data-rule = "phone" for = "program-item__text-phone" size = "30px"  placeholder = "8 (960) 900-60-90" type = "tel" required class = "program-item__input-text">
             <svg class="img-logo-phone program-item__image program-item__image_phone">
               <use xlink:href="img/sprite.svg#phone"></use>
             </svg>
@@ -189,5 +189,6 @@
     </div>
   </footer>
   <script src = "js/picturefill.min.js"></script>
+  <script src = "js/forms.min.js"></script>
 </body>
 </html>

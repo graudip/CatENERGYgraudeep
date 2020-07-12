@@ -46,7 +46,7 @@ gulp.task('cssIn', function() {
 })
 
 gulp.task('jsMin', function() {
-  return gulp.src('source/js/*. +(js |!*.min.js)')
+  return gulp.src("source/js/!(*.min).js")
     .pipe(minify({
       ext: {
         min: '.min.js'
@@ -73,7 +73,7 @@ gulp.task('image', function() {
       interlaced: true,
       quality: 90
     })))
-    .pipe(gulp.dest('build/img/'))
+    .pipe(gulp.dest('source/img/'))
 });
 
 gulp.task('imageIn', function() {
@@ -164,7 +164,7 @@ gulp.task('server', function() {
 	gulp.watch('source/*.html').on('change', server.reload);
 });
 
-gulp.task('start', gulp.series('css', 'image', 'webp', 'svgFix', 'svgSprite', 'eslint', 'server')); 
+gulp.task('start', gulp.series('css', 'image', 'webp', 'svgFix', 'jsMin', 'svgSprite', 'eslint', 'server')); 
 
 gulp.task('test', gulp.series('validateCSS', 'validateJS', 'validateHTML'));
 
