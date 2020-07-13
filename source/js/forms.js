@@ -1,7 +1,4 @@
 let inputs = document.querySelectorAll('input[data-rule]');
-document.addEventListener('DOMContentLoaded', (event) => {
-    console.log('DOM полностью загружен и разобран');
-});
 for (let input of inputs) {
   input.addEventListener('input', function() {
     let rule = this.dataset.rule;
@@ -24,7 +21,6 @@ for (let input of inputs) {
       case 'name':
         check = true;
         check = /^[a-zA-Zа-яА-Я'][a-zA-Zа-яА-Я-' ]+[a-zA-Zа-яА-Я']?$/.test(value);
-        console.log(check);
         if (check) {
           document.getElementById("name").setCustomValidity("");
         }
@@ -45,7 +41,6 @@ for (let input of inputs) {
 
       case 'weight':
         check = /^([0-1]?[0-9])$/.test(value);
-        console.log(check);
         if (!check) {
           document.getElementById("weight").setCustomValidity("Укажите вес вашего питомца!");
         }
