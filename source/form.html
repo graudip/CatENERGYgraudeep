@@ -50,102 +50,106 @@
     </nav>
   </header>
   <main class = "site-main">
-    <section class = "site-main__program container program">
-      <h3 class = "program__heading">Подбор программы</h3>
-      <p class = "program__text">Заполните анкету и мы подберем <br> программу питания для вашего кота</p>
-      <form class = "program__form program-form special__container" name = "program__form" action = "link">
-        <fieldset class = "program-form__list program-list">
-          <div class = "program-item">
-            <label class = "program-item__text" for = "program-item__text-name">Имя:*</label>
-            <input data-rule = "name" name = "program-item__text-name" placeholder="Барсик" type = "text" required class = "program-item__input-text">
-          </div>
-          <div class = "program-item">
-            <label for = "program-item__text-weight" class = "program-item__text">Вес (кг):*</label>
-            <input data-rule = "weight" name = "program-item__text-weight" placeholder= "7" type = "text" required class = "program-item__input-text">
-          </div>
-          <div class = "program-item">
-            <label for ="program-item__text-age" class = "program-item__text">Возраст (лет):</label>
-            <input data-rule = "age" name="program-item__text-age" maxlength="30" type = "text" placeholder= "7" class = "program-item__input-text">
-          </div>
-        </fieldset>
-        <fieldset class = "program-form__list container_abort program-list program-list_radio">
-          <ul class = "program-list__properties properties">
-            <li class="properties__item">
-              <input checked name = "a" type = "radio" class = "properties__input">
-              <label class = "properties__label" for = "a">Похудение</label>
+    <form>
+      <section class = "site-main__program container program">
+        <h3 class = "program__heading">Подбор программы</h3>
+        <p class = "program__text">Заполните анкету и мы подберем <br> программу питания для вашего кота</p>
+        <div class = "program__form program-form special__container">
+          <fieldset class = "program-form__list program-list">
+            <div class = "program-item">
+              <label class = "program-item__text" for = "program-item__text-name">Имя:*</label>
+              <input data-rule = "name" name = "program-item__text-name" placeholder="Барсик" id = "name" type = "text" required class = "program-item__input-text">
+            </div>
+            <div class = "program-item">
+              <label for = "program-item__text-weight" class = "program-item__text">Вес (кг):*</label>
+              <input data-rule = "weight" id = "weight" name = "program-item__text-weight" placeholder= "7" type = "text" required class = "program-item__input-text">
+            </div>
+            <div class = "program-item">
+              <label for ="program-item__text-age" class = "program-item__text">Возраст (лет):</label>
+              <input data-rule = "age" id = "age" name="program-item__text-age" maxlength="30" type = "text" placeholder= "7" class = "program-item__input-text">
+            </div>
+          </fieldset>
+          <fieldset class = "program-form__list container_abort program-list program-list_radio">
+            <ul class = "program-list__properties properties">
+              <li class="properties__item">
+                <input checked name = "a" type = "radio" class = "properties__input">
+                <label class = "properties__label" for = "a">Похудение</label>
+              </li>
+              <li class="properties__item">
+                <input name = "a" type = "radio" class = "properties__input">
+                <label class = "properties__label" for = "a">Набор массы</label>
+              </li>
+              <li class="properties__item">
+                <input name = "a" type = "radio" class = "properties__input">
+                <label class = "properties__label" for = "a">Не знаю (нужен ваш совет)</label>
+              </li>
+            </ul>
+          </fieldset>
+        </div>
+      </section>
+      <section class = "container special__container site-main__contacts owner-contacts">
+        <h3 class = "additional__heading">Контактные данные (владельца кота)</h3>
+        <div class = "program__form program-form">
+          <fieldset class = "program-form__list program-list program-list_width_100">
+            <div class = "program-item program-item_float_left">
+              <label for  = "program-item__text-mail" class = "program-item__text">E-MAIL:*</label>
+              <input data-rule = "email" id = "email" name = "program-item__text-mail" placeholder= "kuklachev@gmail.com" type = "email" required class = "program-item__input-text">
+              <svg class="img-logo-mail program-item__image">
+                <use xlink:href="img/sprite.svg#mail"></use>
+              </svg>
+            </div>
+            <div class = "program-item program-item_display_inline-block">
+              <label class = "program-item__text" name = "program-item__text-phone">Телефон:*</label>
+              <input data-rule = "phone" id = "phone" for = "program-item__text-phone" size = "30px"  placeholder = "8 (960) 900-60-90" type = "tel" required class = "program-item__input-text">
+              <svg class="img-logo-phone program-item__image program-item__image_phone">
+                <use xlink:href="img/sprite.svg#phone"></use>
+              </svg>
+            </div>
+          </fieldset>
+        </div>
+      </section>
+      <section class = "special__container container form_container site-main__comment comment">
+        <h3 class = "additional__heading">Комментарий</h3>
+        <textarea placeholder = "РАССКАЖИТЕ ОБО ВСЕХ ПОВАДКАХ КОТА" class = "comment__text"></textarea>  
+      </section>
+      <section class = "special__container site-main__extra extra container form_container">
+        <h3 class = "additional__heading">Дополнительно</h3>
+        <fieldset>
+          <ul class = "extra__list">
+            <li class="extra__item extra-prop">
+              <input checked id = "cfirst" type = "checkbox" class = "extra-prop__input">
+              <label for = "cfirst" class = "extra-prop__text">Сахарозаменитель</label>
             </li>
-            <li class="properties__item">
-              <input name = "a" type = "radio" class = "properties__input">
-              <label class = "properties__label" for = "a">Набор массы</label>
+            <li class="extra__item">
+              <input id = "csecond" type = "checkbox" class = "extra-prop__input">
+              <label for = "csecond" class = "extra-prop__text">Питьевая вода</label>
             </li>
-            <li class="properties__item">
-              <input name = "a" type = "radio" class = "properties__input">
-              <label class = "properties__label" for = "a">Не знаю (нужен ваш совет)</label>
+            <li class="extra__item">
+              <input id = "cthird" type = "checkbox" class = "extra-prop__input">
+              <label for = "cthird" class = "extra-prop__text">Молоко</label>
+            </li>
+            <li class="extra__item">
+              <input id = "cfourth" type = "checkbox" class = "extra-prop__input">
+              <label for = "cfourth" class = "extra-prop__text">Витамины</label>
             </li>
           </ul>
         </fieldset>
-      </form>
-    </section>
-    <section class = "container special__container site-main__contacts owner-contacts">
-      <h3 class = "additional__heading">Контактные данные (владельца кота)</h3>
-      <form class = "program__form program-form" name = "program__form" action = "link">
-        <fieldset class = "program-form__list program-list program-list_width_100">
-          <div class = "program-item program-item_float_left">
-            <label for  = "program-item__text-mail" class = "program-item__text">E-MAIL:*</label>
-            <input data-rule = "email" name = "program-item__text-mail" placeholder= "kuklachev@gmail.com" type = "email" required class = "program-item__input-text">
-            <svg class="img-logo-mail program-item__image">
-              <use xlink:href="img/sprite.svg#mail"></use>
-            </svg>
-          </div>
-          <div class = "program-item program-item_display_inline-block">
-            <label class = "program-item__text" name = "program-item__text-phone">Телефон:*</label>
-            <input data-rule = "phone" for = "program-item__text-phone" size = "30px"  placeholder = "8 (960) 900-60-90" type = "tel" required class = "program-item__input-text">
-            <svg class="img-logo-phone program-item__image program-item__image_phone">
-              <use xlink:href="img/sprite.svg#phone"></use>
-            </svg>
-          </div>
-        </fieldset>
-      </form>
-    </section>
-    <section class = "special__container container form_container site-main__comment comment">
-      <h3 class = "additional__heading">Комментарий</h3>
-      <textarea placeholder = "РАССКАЖИТЕ ОБО ВСЕХ ПОВАДКАХ КОТА" class = "comment__text"></textarea>  
-    </section>
-    <section class = "special__container site-main__extra extra container form_container">
-      <h3 class = "additional__heading">Дополнительно</h3>
-      <ul class = "extra__list">
-        <li class="extra__item extra-prop">
-          <input checked id = "cfirst" type = "checkbox" class = "extra-prop__input">
-          <label for = "cfirst" class = "extra-prop__text">Сахарозаменитель</label>
-        </li>
-        <li class="extra__item">
-          <input id = "csecond" type = "checkbox" class = "extra-prop__input">
-          <label for = "csecond" class = "extra-prop__text">Питьевая вода</label>
-        </li>
-        <li class="extra__item">
-          <input id = "cthird" type = "checkbox" class = "extra-prop__input">
-          <label for = "cthird" class = "extra-prop__text">Молоко</label>
-        </li>
-        <li class="extra__item">
-          <input id = "cfourth" type = "checkbox" class = "extra-prop__input">
-          <label for = "cfourth" class = "extra-prop__text">Витамины</label>
-        </li>
-      </ul>
-        <button  class = "product__button extra-button" name = "extra-button">Отправить заявку</button>
+        <button type = "submit" class = "product__button extra-button" name = "extra-button">Отправить заявку</button>
         <span  class = "extra__info">* — обязательные поля</span>
-      </form>
-      <br>
-    </section>
-    <section class = "site-main__location location container location_margin-top ">
-      <div class = "location__info info_theme_gray info">
-        <div class = "location__item">
-          <p class = "info__text">Приглашаем к сотрудничеству дилеров!</p>
         </div>
-        <div class = "location__item">
-          <p class = "info__street">  ул. Большая <br> Конюшенная, д. 19/8 <br><br> Санкт-Петербург</p>
+        <br>
+      </section>
+      <section class = "site-main__location location container location_margin-top ">
+        <div class = "location__info info_theme_gray info">
+          <div class = "location__item">
+            <p class = "info__text">Приглашаем к сотрудничеству дилеров!</p>
+          </div>
+          <div class = "location__item">
+            <p class = "info__street">  ул. Большая <br> Конюшенная, д. 19/8 <br><br> Санкт-Петербург</p>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </form>
   </main>
   <footer class = "site-footer container container__footer">
     <a href = "#" class = "site-footer__link site-footer__logo">
@@ -189,6 +193,6 @@
     </div>
   </footer>
   <script src = "js/picturefill.min.js"></script>
-  <script src = "js/forms.min.js"></script>
+  <script async src = "js/forms.js"></script>
 </body>
 </html>

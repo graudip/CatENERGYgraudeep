@@ -166,7 +166,7 @@ gulp.task('server', function() {
 
 gulp.task('start', gulp.series('css', 'image', 'webp', 'svgFix', 'jsMin', 'svgSprite', 'eslint', 'server')); 
 
-gulp.task('test', gulp.series('validateCSS', 'validateJS', 'validateHTML'));
+gulp.task('test', gulp.series('validateCSS', 'validateJS', 'eslint', 'validateHTML'));
 
 gulp.task('build', gulp.series('prodClean', 'svgSprite', 'svgMin', 'image', 
   'webp', 'imageIn', 'css', 'cssIn', 'jsMin', 'jsIn', 'fontsIn', 'htmlIn'));
