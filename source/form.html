@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width, initial-scale = 1">
   <title>cat-energy-form-desktop</title>
   <link rel = "stylesheet" href = "CSS/styles.min.css">
 </head>
@@ -57,31 +57,31 @@
         <div class = "program__form program-form special__container">
           <fieldset class = "program-form__list program-list">
             <div class = "program-item">
-              <label class = "program-item__text" for = "program-item__text-name">Имя:*</label>
-              <input data-rule = "name" name = "program-item__text-name" placeholder="Барсик" id = "name" type = "text" required class = "program-item__input-text">
+              <label class = "program-item__text" for = "name">Имя:*</label>
+              <input data-rule = "name" maxlength = "30" placeholder="Барсик" id = "name" type = "text" required class = "program-item__input-text">
             </div>
             <div class = "program-item">
-              <label for = "program-item__text-weight" class = "program-item__text">Вес (кг):*</label>
-              <input data-rule = "weight" id = "weight" name = "program-item__text-weight" placeholder= "7" type = "text" required class = "program-item__input-text">
+              <label for = "weight" class = "program-item__text">Вес (кг):*</label>
+              <input data-rule = "weight" id = "weight"  placeholder= "7" type = "text" required class = "program-item__input-text">
             </div>
             <div class = "program-item">
-              <label for ="program-item__text-age" class = "program-item__text">Возраст (лет):</label>
-              <input data-rule = "age" id = "age" name="program-item__text-age" maxlength="30" type = "text" placeholder= "7" class = "program-item__input-text">
+              <label class = 'program-item__text age' for ="age">Возраст (лет):</label>
+              <input data-rule = "age" id = "age" maxlength="30" type = "text" placeholder= "7" class = "program-item__input-text">
             </div>
           </fieldset>
           <fieldset class = "program-form__list container_abort program-list program-list_radio">
             <ul class = "program-list__properties properties">
               <li class="properties__item">
-                <input checked name = "a" type = "radio" class = "properties__input">
-                <label class = "properties__label" for = "a">Похудение</label>
+                <input checked id = "slim" type = "radio" class = "properties__input">
+                <label class = "properties__label" for = "slim">Похудение</label>
               </li>
               <li class="properties__item">
-                <input name = "a" type = "radio" class = "properties__input">
-                <label class = "properties__label" for = "a">Набор массы</label>
+                <input id = "getmass" type = "radio" class = "properties__input">
+                <label class = "properties__label" for = "getmass">Набор массы</label>
               </li>
               <li class="properties__item">
-                <input name = "a" type = "radio" class = "properties__input">
-                <label class = "properties__label" for = "a">Не знаю (нужен ваш совет)</label>
+                <input id = "idk" type = "radio" class = "properties__input">
+                <label class = "properties__label" for = "idk">Не знаю (нужен ваш совет)</label>
               </li>
             </ul>
           </fieldset>
@@ -92,15 +92,15 @@
         <div class = "program__form program-form">
           <fieldset class = "program-form__list program-list program-list_width_100">
             <div class = "program-item program-item_float_left">
-              <label for  = "program-item__text-mail" class = "program-item__text">E-MAIL:*</label>
-              <input data-rule = "email" id = "email" name = "program-item__text-mail" placeholder= "kuklachev@gmail.com" type = "email" required class = "program-item__input-text">
+              <label for  = "email" class = "program-item__text">E-MAIL:*</label>
+              <input data-rule = "email" id = "email" placeholder= "kuklachev@gmail.com" type = "email" required class = "program-item__input-text">
               <svg class="img-logo-mail program-item__image">
                 <use xlink:href="img/sprite.svg#mail"></use>
               </svg>
             </div>
             <div class = "program-item program-item_display_inline-block">
-              <label class = "program-item__text" name = "program-item__text-phone">Телефон:*</label>
-              <input data-rule = "phone" id = "phone" for = "program-item__text-phone" size = "30px"  placeholder = "8 (960) 900-60-90" type = "tel" required class = "program-item__input-text">
+              <label class = "program-item__text" for = "phone">Телефон:*</label>
+              <input data-rule = "phone" id = "phone" placeholder = "8 (960) 900-60-90" type = "tel" required class = "program-item__input-text">
               <svg class="img-logo-phone program-item__image program-item__image_phone">
                 <use xlink:href="img/sprite.svg#phone"></use>
               </svg>
@@ -136,7 +136,6 @@
         </fieldset>
         <button type = "submit" class = "product__button extra-button" name = "extra-button">Отправить заявку</button>
         <span  class = "extra__info">* — обязательные поля</span>
-        </div>
         <br>
       </section>
       <section class = "site-main__location location container location_margin-top ">
@@ -183,7 +182,7 @@
     </ul>
     <hr class = "contacts__between-line">
     <div class = "site-footer__logo-developer logo-developer">
-      <a class = "contacts__link-common" href = "#" class = "" title = "Ссылка на HTML Academy"><span class = "contacts__link-text">HTML Academy</span>
+      <a class = "contacts__link-common" href = "#" title = "Ссылка на HTML Academy"><span class = "contacts__link-text">HTML Academy</span>
       <span class = "contacts__link contacts__link_htmlacademy">
         <svg class="img-logo-academy contacts__image logo-developer__logo">
          <use xlink:href="img/sprite.svg#htmlacademy"></use>

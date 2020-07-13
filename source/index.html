@@ -6,7 +6,6 @@
   <title>cat-energy-index-desktop</title>
   <link rel = "stylesheet" href = "CSS/styles.min.css">
   <link rel = "stylesheet" href = "js/picturefill.js">
-  <link href = "css/svg_sprite.css">
 </head>
 <body>
   <header class = "site-header container site-header_after">
@@ -58,7 +57,7 @@
           <source type = "image/webp" media = "(min-width: 1440px)" srcset = "img/index-can@1x.webp 1x , img/index-can@2x.webp 2x">
           <source type = "image/webp" media = "(min-width: 768px)" srcset = "img/index-can-tablet.webp 1x , img/index-can-tablet@2x.webp 2x">
           <source type = "image/webp" media = "(min-width: 320px)" srcset = "img/index-can-mobile.webp 1x , img/index-can-mobile@2x.webp 2x">
-          <img class = "nutrition-info__image" src = "img/index-can@1x.png" srcsetc = "img/index-can.png@2x.png 2x" alt = "Пример нашей продукции">
+          <img class = "nutrition-info__image" src = "img/index-can@1x.png" srcset = "img/index-can.png@2x.png 2x" alt = "Пример нашей продукции">
         </picture>
         <p class = "nutrition-info__heading">Функциональное питание для котов</p>
         <p class = "nutrition-info__text">Занялся собой? Займись котом!</p>
@@ -138,7 +137,7 @@
         <li class = "direction__item">
           <div class = "direction__logo">
             <picture>
-              <source type = "image/webp" srcset = "img/advantage-4.webp 1x, img/advantage-4@2x.webp"> 
+              <source type = "image/webp" srcset = "img/advantage-4.webp 1x, img/advantage-4@2x.webp 2x"> 
               <img src = "img/advantage-4.png" srcset = "img/advantage-4@2x.png 2x" class = "direction__logo-image" alt = "В виде порошка">
             </picture>
           </div>
@@ -163,13 +162,13 @@
       <ul class = "example__list">
         <li class = "example__item">
           <fieldset class = "example__item-fieldset">
-            <legend align = "bottom" class = "example__item-legend">снижение веса</legend>
+            <legend class = "example__item-legend">снижение веса</legend>
             <h3 class = "example__item-title">5 кг</h3>
           </fieldset>
         </li>
         <li class = "example__item">
           <fieldset class = "example__item-fieldset">
-            <legend align = "bottom" class = "example__item-legend">затрачено времени</legend>
+            <legend class = "example__item-legend">затрачено времени</legend>
             <h3 class = "example__item-title">60 дней</h3>
           </fieldset>
         </li>
@@ -179,7 +178,7 @@
         <h3 class = "results__text">Было</h3>
         <picture>
           <source type = "image/webp" media = "(max-width: 767px)" srcset = "img/slider-mobile.webp 1x">
-          <img class = "results__image" src = "img/slider.png">
+          <img class = "results__image" alt = "Слайдер до/после" src = "img/slider.png">
         </picture>
         <h3 class = "results__text">Стало</h3>
       </div>
@@ -227,7 +226,7 @@
     </ul>
     <hr class = "contacts__between-line">
     <div class = "site-footer__logo-developer logo-developer">
-      <a class = "contacts__link-common" href = "#" class = "" title = "Ссылка на HTML Academy"><span class = "contacts__link-text">HTML Academy</span>
+      <a class = "contacts__link-common" href = "#" title = "Ссылка на HTML Academy"><span class = "contacts__link-text">HTML Academy</span>
       <span class = "contacts__link">
         <svg class="img-logo-academy contacts__image logo-developer__logo">
          <use xlink:href="img/sprite.svg#htmlacademy"></use>
