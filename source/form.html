@@ -50,8 +50,8 @@
     </nav>
   </header>
   <main class = "site-main">
-    <form>
-      <section class = "site-main__program container program">
+    <section class = "site-main__program container program">
+      <form>
         <h3 class = "program__heading">Подбор программы</h3>
         <p class = "program__text">Заполните анкету и мы подберем <br> программу питания для вашего кота</p>
         <div class = "program__form program-form special__container">
@@ -72,83 +72,89 @@
           <fieldset class = "program-form__list container_abort program-list program-list_radio">
             <ul class = "program-list__properties properties">
               <li class="properties__item">
-                <input checked id = "slim" type = "radio" class = "properties__input">
+                <input id = "slim" name = "chooseOption" type = "radio" class = "properties__input" checked>
                 <label class = "properties__label" for = "slim">Похудение</label>
               </li>
               <li class="properties__item">
-                <input id = "getmass" type = "radio" class = "properties__input">
-                <label class = "properties__label" for = "getmass">Набор массы</label>
+                <input id = "getMass" name = "chooseOption" type = "radio" class = "properties__input">
+                <label class = "properties__label" for = "getMass">Набор массы</label>
               </li>
               <li class="properties__item">
-                <input id = "idk" type = "radio" class = "properties__input">
+                <input id = "idk" name = "chooseOption" type = "radio" class = "properties__input">
                 <label class = "properties__label" for = "idk">Не знаю (нужен ваш совет)</label>
               </li>
             </ul>
           </fieldset>
         </div>
-      </section>
-      <section class = "container special__container site-main__contacts owner-contacts">
-        <h3 class = "additional__heading">Контактные данные (владельца кота)</h3>
-        <div class = "program__form program-form">
-          <fieldset class = "program-form__list program-list program-list_width_100">
-            <div class = "program-item program-item_float_left">
-              <label for  = "email" class = "program-item__text">E-MAIL:*</label>
-              <input data-rule = "email" id = "email" placeholder= "kuklachev@gmail.com" type = "email" required class = "program-item__input-text">
-              <svg class="img-logo-mail program-item__image">
-                <use xlink:href="img/sprite.svg#mail"></use>
-              </svg>
-            </div>
-            <div class = "program-item program-item_display_inline-block">
-              <label class = "program-item__text" for = "phone">Телефон:*</label>
-              <input data-rule = "phone" id = "phone" placeholder = "8 (960) 900-60-90" type = "tel" required class = "program-item__input-text">
-              <svg class="img-logo-phone program-item__image program-item__image_phone">
-                <use xlink:href="img/sprite.svg#phone"></use>
-              </svg>
-            </div>
+        <div class = "special__container program_disabled">
+          <h3 class = "additional__heading">Контактные данные (владельца кота)</h3>
+          <div class = "program__form program-form">
+            <fieldset class = "program-form__list program-list program-list_width_100">
+              <div class = "program-item program-item_float_left">
+                <label for  = "email" class = "program-item__text">E-MAIL:*</label>
+                <input data-rule = "email" id = "email" placeholder= "kuklachev@gmail.com" type = "email" required class = "program-item__input-text">
+                <svg class="img-logo-mail program-item__image">
+                  <use xlink:href="img/sprite.svg#mail"></use>
+                </svg>
+              </div>
+              <div class = "program-item program-item_display_inline-block">
+                <label class = "program-item__text" for = "phone">Телефон:*</label>
+                <input data-rule = "phone" id = "phone" placeholder = "8 (960) 900-60-90" type = "tel" required class = "program-item__input-text">
+                <svg class="img-logo-phone program-item__image program-item__image_phone">
+                  <use xlink:href="img/sprite.svg#phone"></use>
+                </svg>
+              </div>
+            </fieldset>
+          </div>
+        </div>
+        <div class = "special__container program_disabled form_container site-main__comment comment">
+          <h3 class = "additional__heading">Комментарий</h3>
+          <textarea placeholder = "РАССКАЖИТЕ ОБО ВСЕХ ПОВАДКАХ КОТА" class = "comment__text"></textarea>  
+        </div>
+        <div class = "program_disabled site-main__extra extra special__container form_container">
+          <h3 class = "additional__heading">Дополнительно</h3>
+          <fieldset>
+            <ul class = "extra__list">
+              <li class="extra__item extra-prop">
+                <input checked id = "sweetener" type = "checkbox" class = "extra-prop__input">
+                <label for = "sweetener" class = "extra-prop__text">Сахарозаменитель</label>
+              </li>
+              <li class="extra__item">
+                <input id = "water" type = "checkbox" class = "extra-prop__input">
+                <label for = "water" class = "extra-prop__text">Питьевая вода</label>
+              </li>
+              <li class="extra__item">
+                <input id = "milk" type = "checkbox" class = "extra-prop__input">
+                <label for = "milk" class = "extra-prop__text">Молоко</label>
+              </li>
+              <li class="extra__item">
+                <input id = "vitamins" type = "checkbox" class = "extra-prop__input">
+                <label for = "vitamins" class = "extra-prop__text">Витамины</label>
+              </li>
+            </ul>
           </fieldset>
+          <input type = "submit" class = "product__button extra-button" value = "Отправить заявку" name = "extra-button" id = "extra-button">
+          <span  class = "extra__info">* — обязательные поля</span>
+          <br>
         </div>
-      </section>
-      <section class = "special__container container form_container site-main__comment comment">
-        <h3 class = "additional__heading">Комментарий</h3>
-        <textarea placeholder = "РАССКАЖИТЕ ОБО ВСЕХ ПОВАДКАХ КОТА" class = "comment__text"></textarea>  
-      </section>
-      <section class = "special__container site-main__extra extra container form_container">
-        <h3 class = "additional__heading">Дополнительно</h3>
-        <fieldset>
-          <ul class = "extra__list">
-            <li class="extra__item extra-prop">
-              <input checked id = "cfirst" type = "checkbox" class = "extra-prop__input">
-              <label for = "cfirst" class = "extra-prop__text">Сахарозаменитель</label>
-            </li>
-            <li class="extra__item">
-              <input id = "csecond" type = "checkbox" class = "extra-prop__input">
-              <label for = "csecond" class = "extra-prop__text">Питьевая вода</label>
-            </li>
-            <li class="extra__item">
-              <input id = "cthird" type = "checkbox" class = "extra-prop__input">
-              <label for = "cthird" class = "extra-prop__text">Молоко</label>
-            </li>
-            <li class="extra__item">
-              <input id = "cfourth" type = "checkbox" class = "extra-prop__input">
-              <label for = "cfourth" class = "extra-prop__text">Витамины</label>
-            </li>
-          </ul>
-        </fieldset>
-        <button type = "submit" class = "product__button extra-button" name = "extra-button">Отправить заявку</button>
-        <span  class = "extra__info">* — обязательные поля</span>
-        <br>
-      </section>
-      <section class = "site-main__location location container location_margin-top ">
-        <div class = "location__info info_theme_gray info">
-          <div class = "location__item">
-            <p class = "info__text">Приглашаем к сотрудничеству дилеров!</p>
-          </div>
-          <div class = "location__item">
-            <p class = "info__street">  ул. Большая <br> Конюшенная, д. 19/8 <br><br> Санкт-Петербург</p>
-          </div>
+        <div class = "form__modal modal">
+          <svg class="img-logo-form modal__image">
+            <use xlink:href="img/sprite.svg#tick-success"></use>
+          </svg>
+          <span class = "modal__text"> Отправка формы прошла успешно!</span>
         </div>
-      </section>
-    </form>
+      </form>
+    </section>
+    <section class = "site-main__location location container location_margin-top ">
+      <div class = "location__info info_theme_gray info">
+        <div class = "location__item">
+          <p class = "info__text">Приглашаем к сотрудничеству дилеров!</p>
+        </div>
+        <div class = "location__item">
+          <p class = "info__street">  ул. Большая <br> Конюшенная, д. 19/8 <br><br> Санкт-Петербург</p>
+        </div>
+      </div>
+    </section>
   </main>
   <footer class = "site-footer container container__footer">
     <a href = "#" class = "site-footer__link site-footer__logo">
@@ -192,7 +198,7 @@
     </div>
   </footer>
   <script async src = "js/picturefill.min.js"></script>
-  <script src = "js/script.js"></script>
+  <script src = "js/forms.js"></script>
   <script>
     document.createElement("picture");
   </script>
