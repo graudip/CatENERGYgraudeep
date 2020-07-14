@@ -18,18 +18,24 @@ const regExp = {
   email: /^((([0-9A-Za-z]{1}[-0-9A-z\.]{1,}[0-9A-Za-z]{1})|([0-9А-Яа-я]{1}[-0-9А-я\.]{1,}[0-9А-Яа-я]{1}))@([-A-Za-z]{1,}\.){1,2}[-A-Za-z]{2,})$/,
   weight: /^([0-1]?[0-9])$/,
   phone: /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/,
-  age: /^([0-2]?[0-9])$/,
-  name: /^[a-zA-Zа-яА-Я"][a-zA-Zа-яА-Я-" ]+[a-zA-Zа-яА-Я"]?$/,
+  name: /^[a-zA-Zа-яА-Я"][a-zA-Zа-яА-Я-"]+[a-zA-Zа-яА-Я"]$/,
+  age: /^([0-2]?[0-9])$/
 };
 
-let validate = function(name, value) {
-  if (!(regExp[name].test(value))) {
-    window[name].setCustomValidity(errorText[name]);
+let validate = function(key, value) {
+  if (!(regExp[key].test(value))) {
+    document.getElementById(key).setCustomValidity(errorText[key]);
   }
   else {
-    window[name].setCustomValidity("");
+    document.getElementById(key).setCustomValidity("");
   }
 };
+
+name.addEventListener("input", function() {
+  let name__value = name.value;
+  validate("name", name__value);
+  this.removeEventListener(event.type,arguments.callee,event.eventPhase);
+}, false);
 
 email.addEventListener("input", function() {
   let email__value = email.value;
@@ -49,12 +55,6 @@ age.addEventListener("input", function() {
   this.removeEventListener(event.type,arguments.callee,event.eventPhase);
 }, false);
 
-name.addEventListener("input", function() {
-  let name__value = name.value;
-  validate("name", name__value);
-  this.removeEventListener(event.type,arguments.callee,event.eventPhase);
-}, false);
-
 weight.addEventListener("input", function() {
   let weight__value = weight.value;
   validate("weight", weight__value);
@@ -68,3 +68,4 @@ form.addEventListener("submit", function(event) {
     modal.style.display = "none";
   }, 5000);
 });
+
