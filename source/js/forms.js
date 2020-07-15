@@ -23,41 +23,36 @@ const regExp = {
 };
 
 let validate = function(key, value) {
-  if (!(regExp[key].test(value))) {
-    document.getElementById(key).setCustomValidity(errorText[key]);
-  }
-  else {
-    document.getElementById(key).setCustomValidity("");
-  }
+  (!(regExp[key].test(value))) ? document.getElementById(key).setCustomValidity(errorText[key]) : document.getElementById(key).setCustomValidity("");
 };
 
 name.addEventListener("input", function() {
-  let name__value = name.value;
-  validate("name", name__value);
+  let nameValue = name.value;
+  validate("name", nameValue);
   this.removeEventListener(event.type,arguments.callee,event.eventPhase);
 }, false);
 
 email.addEventListener("input", function() {
-  let email__value = email.value;
-  validate("email", email__value);
+  let emailValue = email.value;
+  validate("email", emailValue);
   this.removeEventListener(event.type,arguments.callee,event.eventPhase);
 }, false);
 
 phone.addEventListener("input", function() {
-  let phone__value = phone.value;
-  validate("phone", phone__value);
+  let phoneValue = phone.value;
+  validate("phone", phoneValue);
   this.removeEventListener(event.type,arguments.callee,event.eventPhase);
 }, false);
 
 age.addEventListener("input", function() {
-  let age__value = age.value;
-  validate("age", age__value);
+  let ageValue = age.value;
+  validate("age", ageValue);
   this.removeEventListener(event.type,arguments.callee,event.eventPhase);
 }, false);
 
 weight.addEventListener("input", function() {
-  let weight__value = weight.value;
-  validate("weight", weight__value);
+  let weightValue = weight.value;
+  validate("weight", weightValue);
   this.removeEventListener(event.type,arguments.callee,event.eventPhase);
 }, false);
 
