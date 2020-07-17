@@ -33,6 +33,9 @@
           <a href = "form.html" class = "nav-menu__link_hover_gray nav-menu__link nav-menu__link_color_black nav-menu__link_active_green" title = "Подбор программы">Подбор программы</a>
         </li>
         <li class = "nav-menu__item">
+          <a href = "auth.html" class = "nav-menu__link_hover_gray nav-menu__link nav-menu__link_color_black" title = "Подбор программы">Войти</a>
+        </li>
+        <li class = "nav-menu__item">
           <a class = "" href = "#">
             <svg class = "img-logo-header navigation__logo">
               <use xlink:href = "img/sprite.svg#logo-mobile-header"></use>
@@ -51,7 +54,7 @@
   </header>
   <main class = "site-main">
     <section class = "site-main__program container program">
-      <form>
+      <form id = "mainForm">
         <h3 class = "program__heading">Подбор программы</h3>
         <p class = "program__text">Заполните анкету и мы подберем <br> программу питания для вашего кота</p>
         <div class = "program__form program-form special__container">
@@ -109,7 +112,7 @@
         </div>
         <div class = "special__container program_disabled form_container site-main__comment comment">
           <h3 class = "additional__heading">Комментарий</h3>
-          <textarea placeholder = "РАССКАЖИТЕ ОБО ВСЕХ ПОВАДКАХ КОТА" class = "comment__text"></textarea>  
+          <textarea id = "comment" placeholder = "РАССКАЖИТЕ ОБО ВСЕХ ПОВАДКАХ КОТА" class = "comment__text"></textarea>  
         </div>
         <div class = "program_disabled site-main__extra extra special__container form_container">
           <h3 class = "additional__heading">Дополнительно</h3>
@@ -137,7 +140,7 @@
           <span  class = "extra__info">* — обязательные поля</span>
           <br>
         </div>
-        <div class = "form__modal modal">
+        <div class = "form__modal modal" id = "modal">
           <svg class="img-logo-form modal__image">
             <use xlink:href="img/sprite.svg#tick-success"></use>
           </svg>
@@ -202,5 +205,8 @@
   <script>
     document.createElement("picture");
   </script>
+  <script src = "bundle.js"></script>
+  <script src="/__/firebase/7.16.0/firebase-app.js"></script>
+  <script src="/__/firebase/init.js"></script>
 </body>
 </html>

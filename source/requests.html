@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Список заявок</title>
+  <link rel = "stylesheet" href = "css/styles.min.css">
+</head>
+<body>
+  <main class = "main__menu menu">
+    <section class = "menu__list list">
+      <h1 class = "list__heading">Заявки пользователей</h1>
+      <div class = "list__item item">
+        <hr>
+        <p class = "item__text">Имя:<span id = "userName"></span><br>Возраст:<span id = "userAge"></span><br>Вес:<span id = "userWeight"></span><br>Электронная почта:<span id = "userEmail"></span><br>Телефон:<span id = "userPhone"></span><br>Комментарий пользователя:<span id = "userComment"></span><br>Сахарозаменитель:<span id = "userSweetener"></span><br>Питьевая вода:<span id = "userWater"></span><br>Молоко<span id = "userMilk"></span><br>Витамины:<span id = "userVitamins"></span></p>
+        <button onclick = "requestDelete()" class = "item__delete">Удалить</button>
+        <hr>
+      </div>
+
+    </section>
+  </main>
+  <script src = "./bundle.js"></script>
+</body>
+</html>

@@ -1,10 +1,19 @@
-let weight = document.querySelector("#weight"),
-    age = document.querySelector("#age"),
-    name = document.querySelector("#name"),
-    phone = document.querySelector("#phone"),
-    email = document.querySelector("#email"),
-    form = document.querySelector("form"),
-    modal = document.querySelector(".modal");
+let form = document.querySelector("#mainForm"),
+    weight = form.querySelector("#weight"),
+    age = form.querySelector("#age"),
+    name = form.querySelector("#name"),
+    phone = form.querySelector("#phone"),
+    email = form.querySelector("#email"),
+    modal = form.querySelector(".modal"),
+    submitButton = document.getElementById("extra-button"),
+    slim = form.querySelector("#slim"),
+    getMass = form.querySelector("#getMass"),
+    idk = form.querySelector("#idk"),
+    sweetener = form.querySelector("#sweetener"),
+    water = form.querySelector("#water"),
+    milk = form.querySelector("#milk"),
+    vitamins = form.querySelector("#vitamins"),
+    comment = form.querySelector("#comment");
 
 const errorText = {
   phone: "Укажите верный номер телефона!",
@@ -12,6 +21,7 @@ const errorText = {
   email: "Укажите верную почту!",
   weight: "Укажите вес вашего питомца!",
   age: "Укажите возраст вашего питомца!",
+  password: "Исключите из вашего пароля спец. символы!"
 };
 
 const regExp = {
@@ -19,7 +29,8 @@ const regExp = {
   weight: /^([0-1]?[0-9])$/,
   phone: /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/,
   name: /^[a-zA-Zа-яА-Я"][a-zA-Zа-яА-Я-"]+[a-zA-Zа-яА-Я"]$/,
-  age: /^([0-2]?[0-9])$/
+  age: /^([0-2]?[0-9])$/,
+  password: /(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*]{6,}/,
 };
 
 let validate = function(key, value) {
